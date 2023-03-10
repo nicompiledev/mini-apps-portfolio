@@ -1,0 +1,105 @@
+.App{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+  font-family: Lato, sans-serif;
+  background-color: cadetblue;
+}
+
+
+/* Estilos para el encabezado */
+h1 {
+  font-size: 5.5em;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+  color: #fff;
+}
+
+/* Estilos para el párrafo */
+p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contador {
+  min-width: 300px;
+  height: 300px;
+  background-color: #000;
+  color: #fff;
+  padding: 25px;
+  display: flex;
+  margin: 35px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #fff;
+  font-size: 160px;
+  margin-bottom: 15px;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para el botón */
+button {
+  background-color: black;
+  width: 250px;
+  height: 80px;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00471b;
+}
+
+button:active {
+  background-color: #005cbf;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+/* Media queries para hacer la página responsive */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .contador {
+    height: 200px;
+    font-size: 80px;
+  }
+
+  button {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
