@@ -15,22 +15,22 @@ const routes: Routes = [
   {
     path: 'country',
     component: ByCountryComponent,
-    pathMatch: 'full'
+
   },
   {
     path: 'region',
     component: ByRegionComponent,
-    pathMatch: 'full'
+
   },
   {
     path: 'capital',
     component: ByCapitalComponent,
-    pathMatch: 'full'
+
   },
   {
     path: 'country/:id',
     component: ShowCountryComponent,
-    pathMatch: 'full'
+
   },
   {
     path: '**',
