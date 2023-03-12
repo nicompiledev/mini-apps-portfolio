@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
   ]
 })
 export class ByCountryComponent {
+  term: string = '';
+
+  search(term: string) {
+    this.term = term;
+    console.log(this.term);
+  }
 
 }
