@@ -17,8 +17,8 @@ export class ByCountryComponent {
     this.error404 = false;
     console.log(this.term);
     this.countryService.getCountryByName(this.term).subscribe({
-      next: (resp) => {
-        console.log(resp);
+      next: (countries) => {
+        console.log(countries);
         // this.countries = resp;
       },
       error: (err) => {

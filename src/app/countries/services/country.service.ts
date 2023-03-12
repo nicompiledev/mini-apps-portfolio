@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environments';
 import { catchError, Observable, of } from 'rxjs';
+import { Country } from '../interfaces/country-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,7 @@ export class CountryService {
   }
 
   // Get country by name
-  getCountryByName( name: string ): Observable<any> {
-    return this.http.get(`${this.basseUrl}/name/${name}`);
+  getCountryByName( name: string ): Observable<Country[]> {
+    return this.http.get<Country[]>(`${this.basseUrl}/name/${name}`);
   }
 }
