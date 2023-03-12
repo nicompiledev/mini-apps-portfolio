@@ -2,7 +2,7 @@
 <hr>
 <div class="row">
   <div class="col">
-    <form (ngSubmit)="search(term)" autocomplete="off">
+    <form (ngSubmit)="search()" autocomplete="off">
       <input
       type="text"
       name="term"
@@ -10,15 +10,17 @@
       [(ngModel)]="term"
       placeholder="Search country...">
     </form>
+
+
   </div>
 </div>
 
 <hr>
-<div class="alert alert-danger">
-  <p>Country not found</p>
+<div *ngIf="error404" class="alert alert-danger text-center align-items-center">
+  <p class="m-0">No results for: "{{ term }}"</p>
 </div>
 
-<div class="row">
+<div *ngIf="!error404" class="row">
   <div class="col">
     <table class="table table-hover">
       <thead>

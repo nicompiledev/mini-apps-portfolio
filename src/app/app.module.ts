@@ -18,6 +18,7 @@ import { CounterComponent } from './counter/counter.component';
 import { CountriesModule } from './countries/countries.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRountingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { AppRountingModule } from './app-routing.module';
     // modulos creados por nosotros
     CountriesModule,
     SharedModule,
-    AppRountingModule
+    AppRountingModule,
+    HttpClientModule
 
   ],
   providers: [],
