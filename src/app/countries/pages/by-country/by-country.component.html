@@ -1,6 +1,6 @@
 <h2>By Country</h2>
 <hr>
-<div class="row">
+<div class="row" >
   <div class="col">
     <form (ngSubmit)="search()" autocomplete="off">
       <input
@@ -20,7 +20,7 @@
   <p class="m-0">No results for: "{{ term }}"</p>
 </div>
 
-<div *ngIf="!error404" class="row">
+<div *ngIf="!error404 && showTable" class="row">
   <div class="col">
     <table class="table table-hover">
       <thead>
@@ -34,12 +34,18 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Flag</td>
-          <td>Name</td>
-          <td>Population</td>
-          <td><a href="#">See more...</a></td>
+        <tr *ngFor="let country of countries; let i = index">
+          <td>{{i +1}}</td>
+          <td>
+            <img
+            [src]="country.flags.png"
+            [alt]="country.flags.alt"
+            style="width: 50px">
+          </td>
+          <td>{{country.name.common}}</td>
+          <td>{{country.population | number}}</td>
+          <td><a [routerLink]="['/country', country.name.common]">See more...</a>
+          </td>
         </tr>
       </tbody>
     </table>
